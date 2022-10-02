@@ -19,7 +19,7 @@ outputs:
     description: 'The created issue'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
 branding:
   icon: 'activity'
   color: 'green'
