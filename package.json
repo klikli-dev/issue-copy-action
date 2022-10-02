@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/soichisumi/issue-copy-action.git"
+    "url": "git+https://github.com/klikli-dev/issue-copy-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/soichisumi/issue-copy-action/issues"
+    "url": "https://github.com/klikli-dev/issue-copy-action/issues"
   },
-  "homepage": "https://github.com/soichisumi/issue-copy-action#readme",
+  "homepage": "https://github.com/klikli-dev/issue-copy-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.0",
     "@actions/github": "^2.0.0"
