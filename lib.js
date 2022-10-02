@@ -1,5 +1,7 @@
 // content of context: https://developer.github.com/v3/activity/events/types/
 const github = require('@actions/github');
+const { Octokit } = require("@octokit/rest");
+
 
 const getIssueNumber = () => {
     const issue = github.context.payload.issue;
@@ -11,11 +13,11 @@ const getIssueNumber = () => {
 module.exports.getIssueNumber = getIssueNumber;
 
 const getIssueFromContext = async (token) => {
-    let octocat = new github.GitHub(token);
+    let octokit = new Octokit(token);
     const issueNum = getIssueNumber();
 
     const repo = github.context.repo;
-    const issue = await octocat.issues.get({
+    const issue = await octokit.issues.get({
         owner: repo.owner,
         repo: repo.repo,
         issue_number: issueNum,
@@ -46,7 +48,7 @@ const checkKeywords = (keywords, body) => {
 module.exports.checkKeywords = checkKeywords;
 
 const createNewIssue = async (token, owner, repoName, title, body, assignees, labels, fromIssue) => {
-    const octokit = new github.GitHub(token);
+    const octokit = new Octokit(token);
     if (!fromIssue) {
         throw new Error('fromIssue is not provided')
     }
