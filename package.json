@@ -20,12 +20,7 @@
   },
   "homepage": "https://github.com/klikli-dev/issue-copy-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^2.0.0"
-  },
-  "devDependencies": {
-    "@zeit/ncc": "^0.20.5",
-    "eslint": "^6.3.0",
-    "jest": "^24.9.0"
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
   }
 }
